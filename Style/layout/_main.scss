@@ -1,0 +1,175 @@
+/**********************************************************************/
+/*Main*/
+/**********************************************************************/
+
+/*Grid 50% & 50% for 2 containers, and center elements*/
+main {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  align-items: center;
+  justify-content: center;
+  justify-items: start;
+  min-height: 100vh;
+
+  @media screen and (max-width: 1200px) {
+    grid-template-columns: 45% 55%;
+  }
+
+  @media screen and (max-width: 1050px) {
+    grid-template-columns: 40% 60%;
+  }
+  @media screen and (max-width: 950px) {
+    display: flex;
+    flex-direction: column;
+  }
+  /*container left with title and txt*/
+  .left-container {
+    text-align: left;
+
+    @media screen and (max-width: 950px) {
+      text-align: center;
+    }
+
+    h1 {
+      line-height: 45px;
+      font-size: 2.3rem;
+      margin-bottom: 20px;
+      padding: 0 20% 0 20%;
+
+      @media screen and (max-width: 1200px) {
+        padding: 0 10% 0 10%;
+        font-size: 1.8rem;
+      }
+
+      @media screen and (max-width: 950px) {
+        padding: 0 10% 0 10%;
+        margin-bottom: 30px;
+      }
+    }
+
+    p {
+      padding: 0 20% 0 20%;
+
+      @media screen and (max-width: 1200px) {
+        padding: 0 10% 0 10%;
+        font-size: 0.9rem;
+
+        @media screen and (max-width: 950px) {
+          padding: 0 15% 7% 15%;
+        }
+      }
+    }
+  }
+  /*container right with form*/
+  .right-container {
+    display: block;
+
+    .register-plan {
+      background: $blue;
+      color: rgb(255, 255, 255);
+      font-size: 1rem;
+      letter-spacing: 1px;
+      font-weight: 700;
+      width: 540px;
+      height: 60px;
+      border: none;
+      border-radius: 7px;
+      box-shadow: 0px 8px 0px 0px hsla(249, 10%, 26%, 0.3);
+      margin-bottom: 25px;
+      cursor: pointer;
+
+      @media screen and (max-width: 600px) {
+        width: 90%;
+        height: 120px;
+      }
+
+      span {
+        font-size: 0.95rem;
+        font-weight: 400;
+      }
+    }
+    form {
+      background: rgb(250, 250, 250);
+      border-radius: 7px;
+      width: 540px;
+      height: 475px;
+      box-shadow: 0px 8px 0px 0px hsla(249, 10%, 26%, 0.3);
+      padding-top: 35px;
+      margin: 0 auto;
+
+      @media screen and (max-width: 600px) {
+        padding-top: 20px;
+        width: 90%;
+        height: 444px;
+      }
+
+      input[type="text"],
+      input[type="password"] {
+        border: 1px solid $grayishBlue;
+        background: none;
+        height: 54px;
+        width: 85%;
+        border-radius: 5px;
+        padding-left: 32px;
+        font-weight: 600;
+        transition: 0.2s;
+        margin-bottom: 25px;
+
+        &:focus {
+          border: 1.5px solid $blue;
+        }
+      }
+
+      input[type="submit"] {
+        border: 2px solid rgba(4, 84, 49, 0.2);
+        background: $green;
+        color: rgb(255, 255, 255);
+        text-transform: uppercase;
+        font-size: 1.1rem;
+        height: 54px;
+        width: 85%;
+        border-radius: 5px;
+        margin-bottom: 15px;
+
+        cursor: pointer;
+        transition: 0.4s;
+
+        &:hover {
+          background: hsl(154, 59%, 51%, 0.6);
+        }
+      }
+
+      p {
+        color: $grayishBlue;
+        font-size: 0.7rem;
+        font-weight: 600;
+        margin-bottom: 20px;
+
+        @media screen and (max-width: 950px) {
+          font-size: 0.6rem;
+          margin-bottom: 0px;
+          padding: 0 10%;
+        }
+        span {
+          color: $red;
+          cursor: pointer;
+          transition: 0.2s;
+
+          &:hover {
+            transform: scale(1.05);
+          }
+        }
+      }
+    }
+
+    .error input {
+      color: $red;
+      border: 1px solid $red;
+    }
+    .error span {
+      visibility: visible;
+      opacity: 1;
+      color: $red;
+    }
+  }
+}

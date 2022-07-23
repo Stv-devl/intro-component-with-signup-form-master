@@ -5,7 +5,7 @@ const inputs = document.querySelectorAll(
 );
 let firstname, lastname, email, password;
 
-//variable errorDisplay
+//variable errorDisplay for take care error message and thank part
 const errorDisplay = (tag, message, valid) => {
   const container = document.querySelector("." + tag + "-container");
   const span = document.querySelector("." + tag + "-container > span");
@@ -13,18 +13,10 @@ const errorDisplay = (tag, message, valid) => {
   if (!valid) {
     container.classList.add("error");
     span.textContent = message;
-  }
-};
-
-const sucessDisplay = (tag, message, valid) => {
-  const container = document.querySelector("." + tag + "-container");
-  const span = document.querySelector("." + tag + "-container > span");
-
-  if (firstname && lastname && email && password == valid) {
+  } else {
     container.classList.remove("error");
     span.textContent = message;
   }
-  console.log(sucessDisplay);
 };
 
 //variable for check firstname
@@ -66,7 +58,7 @@ const passwordChecker = (value) => {
     password = value;
   }
 };
-//for every input register writing in inputs
+//register every writing in inputs
 inputs.forEach((input) => {
   input.addEventListener("input", (e) => {
     switch (e.target.id) {
@@ -89,8 +81,8 @@ inputs.forEach((input) => {
 });
 
 //Submit//
-//If everything is complete send data when submit, if not alert message ask to fill the forms
 form.addEventListener("submit", (e) => {
+  //if Firstname is not good add border color + red icone + texte
   e.preventDefault();
   if (firstname == null) {
     errorDisplay(
@@ -98,24 +90,25 @@ form.addEventListener("submit", (e) => {
       "The first name must be between 3 and 20 characters"
     );
   }
-
+  //if lastname is not good add border color + red icone + texte
   if (lastname == null) {
     errorDisplay(
       "lastname",
       "The Last name must be between 3 and 20 characters"
     );
   }
-
+  //if email is not good add border color + red icone + texte
   if (email == null) {
     errorDisplay("email", "Email is not valid");
   }
-
+  //if password is not good add border color + red icone + texte
   if (password == null) {
     errorDisplay(
       "password",
       "Minimum of 8 characters, one capital letter, one number and one special character"
     );
   }
+  //if everything is complete good, send datas (see consol log), thank you message, delete error messages and delete everything write in forms
   if (firstname && lastname && email && password) {
     const data = {
       firstname,
@@ -127,10 +120,11 @@ form.addEventListener("submit", (e) => {
     alert("Thank you, we will back to you soon");
     //=>for empty form after complet
     inputs.forEach((input) => (input.value = ""));
-    errorDisplay("firstname", "");
-    errorDisplay("lastname", "");
-    errorDisplay("email", "");
-    errorDisplay("password", "");
-    errorDisplay("password", "");
+    errorDisplay("firstname", "", true);
+    errorDisplay("lastname", "", true);
+    errorDisplay("email", "", true);
+    errorDisplay("password", "", true);
+    errorDisplay("password", "", true);
+    errorDisplay("password", "", true);
   }
 });

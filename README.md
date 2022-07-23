@@ -28,16 +28,12 @@ Users should be able to:
 
 ### Screenshot
 
-IN CONSTRUCTION
-
-![](./screenshot.jpg)
+![](./Screenshot/Screenshot.png)
 
 ### Links
 
-IN CONSTRUCTION
-
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Github code](https://github.com/Stv-devl/intro-component-with-signup-form-master)
+- Live Site URL: [You can see here](https://stv-devl.github.io/intro-component-with-signup-form-master/)
 
 ## My process
 
@@ -53,7 +49,21 @@ IN CONSTRUCTION
 
 ### What I learned
 
+I learned to validate a form in javascript. That was an interesting challenge.
+
+For submit the form :
+
+- The firstname should have between 3 and 20 characters
+- The Lastname should have between 3 and 20 characters
+- Email should be a valid adress email
+- Passord should have a minimum of 8 characters, one capital letter, one number and one special character
+
+When the form is not valid a red icon and an error message will appear to ask the utilisator to fix.
+When the form is valid. The data is send(see in consol(log) and you get an alert with a "thank you" message.
+
 ### Continued development
+
+I will send a V2 of this form with different features. With a progress bar for the password. And we will have an error message directly when we typing.
 
 ## Author
 

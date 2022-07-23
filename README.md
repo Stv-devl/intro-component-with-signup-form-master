@@ -2,6 +2,8 @@
 
 This is a solution to the [Intro component with sign up form challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/intro-component-with-signup-form-5cf91bd49edda32581d28fd1). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
+Version V1
+
 ## Table of contents
 
 - [Overview](#overview)
@@ -58,12 +60,12 @@ For submit the form :
 - Email should be a valid adress email
 - Passord should have a minimum of 8 characters, one capital letter, one number and one special character
 
-When the form is not valid a red icon and an error message will appear to ask the utilisator to fix.
-When the form is valid. The data is send(see in consol(log) and you get an alert with a "thank you" message.
+. When the form is not valid a red icon and an error message will appear to ask the utilisator to fix it.
+. When the form is valid. The data is send (see in consol(log)) and you get a "thank you" message.
 
 ### Continued development
 
-I will send a V2 of this form with different features. With a progress bar for the password. And we will have an error message directly when we typing.
+I will send a V2 of this form with different features.
 
 ## Author
 

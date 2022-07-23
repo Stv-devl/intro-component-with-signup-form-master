@@ -51,17 +51,16 @@ Users should be able to:
 
 ### What I learned
 
-I learned to validate a form in javascript. That was an interesting challenge.
+I learned to validate a form in JavaScript. That was an interesting challenge.
 
 For submit the form :
+-The first name should have between 3 and 20 characters.
+-The last name should have between 3 and 20 characters.
+-Email should be a valid address email.
+-Password should have a minimum of 8 characters, one capital letter, one number and one special character.
 
-- The firstname should have between 3 and 20 characters
-- The Lastname should have between 3 and 20 characters
-- Email should be a valid adress email
-- Passord should have a minimum of 8 characters, one capital letter, one number and one special character
-
-. When the form is not valid a red icon and an error message will appear to ask the utilisator to fix it.
-. When the form is valid. The data is send (see in consol(log)) and you get a "thank you" message.
+. When the form is not valid a red icon and an error message will appear.
+. When the form is valid you get a "thank you" message.
 
 ### Continued development
 
